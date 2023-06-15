@@ -1,5 +1,4 @@
 import React from "react"
-
 import ShopCart from "./ShopCart"
 import "./style.css"
 
@@ -16,7 +15,6 @@ const Shop = ({ addToCart, shopItems }) => {
                 <h2>Productos</h2>
               </div>
               <div className='heading-right row '>
-               
                 
               </div>
             </div>

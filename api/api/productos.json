@@ -1,0 +1,96 @@
+{
+  "name": "Coquitos",
+  "home": "demo1",
+  "year": 2023,
+  "products": [
+    {
+      "stock": 2,
+      "discount": 15,
+      "img": "./images/Esenciales/flash-2.png",
+      "title": "Frost Cat Indoor 7.5kg + Obsequio",
+      "price": 1950,
+      "category": ["Comida"]
+    },
+    {
+      "stock": 3,
+      "discount": 40,
+      "img": "./images/Esenciales/flash-3.png",
+      "title": "Equilibrio perro adulto 18kg + obsequio",
+      "price": 2990,
+      "category": ["Comida"]
+    },
+    {
+      "stock": 4,
+      "discount": 20,
+      "img": "./images/Esenciales/flash-4.png",
+      "title": "Rascador de gato 2 niveles con cama 70cm",
+      "price": 1790,
+      "category": ["Juguetes", "Para la Casa"]
+    },
+    {
+      "stock": 5,
+      "discount": 10,
+      "img": "./images/Esenciales/flash-5.png",
+      "title": "Bandeja Sanitaria Para Gato Con Borde Extraíble Y Pala",
+      "price": 520,
+      "category": ["Para la casa", "Custockado"]
+    },
+    {
+      "stock": 6,
+      "discount": 10,
+      "img": "./images/Esenciales/flash-1.png",
+      "title": "Platos Comida 30cm para perro/gato",
+      "price": 349,
+      "category": ["Comida", "Para la Casa"]
+    },
+    {
+      "stock": 7,
+      "img": "./images/arrivals/arrivals1.png",
+      "title": "Bebedero De Agua Inteligente Xiaomi Para Mascotas Amv",
+      "price": "2.598",
+      "category": ["Comida", "Para la Casa"]
+    },
+    {
+      "stock": 8,
+      "img": "./images/arrivals/arrivals2.png",
+      "title": "Cuna Cama Cucha Mascota Perro Gato Rectangular 50 X 37 Atrix",
+      "price": "347",
+      "category": ["Para la Casa"]
+    },
+    {
+      "stock": 9,
+      "img": "./images/arrivals/arrivals3.png",
+      "title": "3 Tabletas Antipulgas Y Garrapatas Simparica De 20 A 40 Kg",
+      "price": "1.220",
+      "category": ["Cuidado", "Para la Casa"]
+    },
+    {
+      "stock": 10,
+      "img": "./images/arrivals/arrivals4.png",
+      "title": "Guante Cepillo Saca Quita Pelos Para Perros Gatos Mascotas",
+      "price": "80",
+      "category": ["Cuidado"]
+    },
+    {
+      "stock": 11,
+      "img": "./images/arrivals/arrivals5.png",
+      "title": "Pañales/sabanillas De Entrenamiento Perro X 50 Unid",
+      "price": "1.195",
+      "category": ["Cuidado"]
+    },
+    {
+      "stock": 12,
+      "img": "./images/arrivals/arrivals6.png",
+      "title": "Pala Higiénica Levanta Desechos De Mascotas Grande Oferta",
+      "price": "350",
+      "category": ["Paseo"]
+    },
+    {
+      "stock": 13,
+      "img": "./images/arrivals/arrivals7.png",
+      "title": "Pipeta Anti Pulgas Y Garrapatas Dominal Max Gatos Mas De 4kg",
+      "price": "244",
+      "category": ["Cuidado"]
+    }
+  ]
+}

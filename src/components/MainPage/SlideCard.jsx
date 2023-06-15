@@ -27,7 +27,7 @@ const SlideCard = () => {
                   <h1>{value.title}</h1>
                   <p>{value.desc}</p>
                   <button className="btn-primary">
-                    Mira nuestra colección!
+                    ¡Mira nuestra colección!
                   </button>
                 </div>
                 <div className="right" >

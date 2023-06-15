@@ -1,3 +1,4 @@
+
 const Sdata = {
   shopItems: [
     {

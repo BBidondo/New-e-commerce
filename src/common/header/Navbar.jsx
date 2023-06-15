@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="container d_flex">
           <div className="catgrories d_flex">
             <h4>
-              Categories <i className="fa fa-chevron-down"></i>
+              Categorías <i className="fa fa-chevron-down"></i>
             </h4>
           </div>
 
