@@ -28,15 +28,13 @@ const initialState = {
   idUsuarioActual: {},
   //
   items: [],
-  reviews: [],
-  favItems: [],
+  
   shopuser: [],
-  filterjuegos: [],
-  filtermandos: [],
+
   sortBy: "",
   numbersPaginated: [],
   categoryFilter: "",
-  marksFilter: "",
+  
   nameFilter: "",
   currentPage: 1,
   itemsPerPage: 12,
@@ -58,7 +56,7 @@ const initialState = {
   },
   sorted: [],
   categories: [],
-  marks: [],
+
 
   currentItems: [],
   loading: false,
@@ -110,11 +108,6 @@ export default function rootReducer(state = initialState, action) {
         categoryFilter: action.payload,
       };
 
-    // case POST_PRODUCTS:
-    //   console.log("reducer post",action.payload)
-    //   return{
-    //     ...state,
-    //   }
 
    
 
@@ -134,35 +127,7 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         currentPage: action.payload,
       };
-    // case GET_ALL_PROD:
-    //   // Si ha habido algun ordenamiento, no modificamos aquí pokemonsSorted
-    //   for (let prop in state.sort) {
-    //     if (state.sort[prop] === true) {
-    //       return {
-    //         ...state,
-    //       }
-    //     }
-    //   }
-
-    //   // Si ha habido algun filtrado, no modificamos aquí pokemonsFiltered
-    //   for (let filter in state.filter) {
-    //     if (state.filter[filter]) {
-    //       return {
-    //         ...state,
-    //       }
-    //     }
-    //   }
-
-    //   // Inicialmente, tanto 'pokemonsFiltered' como 'pokemonsSorted' tienen lo mismo que 'pokemons'
-    //   let allItems = action.payload
-    //   return {
-    //     ...state,
-    //     items: allItems,
-    //     sorted: allItems,
-    //     filtered: allItems,
-    //     currentItems: state.sorted.slice(0, state.ItemsPerPage),
-    //     loading: false,
-    //   }
+  
 
     case GET_ALL_CATEGORIES:
       return {

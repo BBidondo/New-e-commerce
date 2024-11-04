@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { setFilterCategory } from '../../common/redux/actions';
-
+import {ShopCart} from "../shops/ShopCart"
 
 const mapDispatchToProps = (dispatch) => {
   return {

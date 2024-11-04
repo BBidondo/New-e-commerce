@@ -5,9 +5,8 @@ export const GET_USER_ID = "GET_USER_ID";
 export const GET_ALL_PROD = "GET_ALL_PROD";
 export const SEARCH_BY_NAME = "SEARCH_BY_NAME";
 export const GET_DETAIL = "GET_DETAIL";
-export const CLEAN_DETAIL = "CLEAN_DETAIL";
 export const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
-
+export const CLEAN_DETAIL = "CLEAN_DETAIL";
 export const RESET_FILTER = "RESET_FILTER";
 export const CHANGE_SORT = "CHANGE_SORT";
 export const CHANGE_FILTER = "CHANGE_FILTER";
@@ -275,51 +274,6 @@ export function postProduct(payload) {
   };
 }
 
-export const addReview = (payload) => {
-  return async function (dispatch) {
-    try {
-      const response = await axios.post(
-        "/review",
-        payload
-      );
-
-      return dispatch({
-        type: "ADD_REVIEW",
-        payload: response.data.body,
-      });
-    } catch (error) {
-      dispatch({
-        type: "ERROR",
-        payload: error,
-      });
-    }
-  };
-};
-
-export function getReviews() {
-  return async function (dispatch) {
-    const jsonreview = await axios.get("/review");
-    const review = jsonreview.data;
-
-    return dispatch({
-      type: "GET_ALL_REVIEWS",
-      payload: review,
-    });
-  };
-}
-
-export function disabledReviews(id){
-  return async function(dispatch){
-    const disabled = await axios.delete(`/review/${id}`)
-    const review = disabled.data
-
-    return dispatch({
-      type: "DISABLED_REVIEWS",
-      payload: review,
-    })
-  }
-}
-
 export function disabledProducts(id) {
   return async function (dispatch) {
     let producto = await axios.get(`/products/${id}`);
@@ -340,11 +294,7 @@ export function disabledProducts(id) {
       payload: id,
     });
   };
-  // let b;
-  // if(isActive){b=false}else{b=true}
-  // return function (dispatch){
-  //   return axios.put(`/products/${id}`, {isActive: b})
-  // }
+
 }
 
 export function addStock(id, number) {

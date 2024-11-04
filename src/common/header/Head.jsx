@@ -12,9 +12,12 @@ const Head = () => {
             <label> coquitospetshop@gmail.com</label>
           </div>
           <div className='right row RText'>
-            <label>Sobre Nosotros</label>
-            
-          </div>
+  <a href="https://www.instagram.com/coquitos.petshop/" target="_blank" style={{ display: 'inline-block', color: "#fff" }}>
+    Sobre Nosotros
+  </a>
+</div>
+
+
         </div>
       </section>
     </>

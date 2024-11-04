@@ -34,9 +34,7 @@ const Navbar = () => {
               <li>
                 <Link to="/vendor">Admin</Link>
               </li>
-              <li>
-                <Link to="/track">Sigue tu compra</Link>
-              </li>
+              
               <li>
                 <Link to="/contact">contactanos</Link>
               </li>

@@ -3,7 +3,7 @@ const mercadopago = require("mercadopago");
 require("dotenv").config();
 const axios = require("axios");
 const p = require("../../productos.json");
-const {desactivarUsuario} = require("../controllers/userControllers");
+const { desactivarUsuario } = require("../controllers/userControllers");
 
 // Modelos de la base de datos ↓
 const { User, Store, Category, Product } = require("../db");
@@ -13,16 +13,11 @@ const {
   getCategories,
   modifyProducts,
 } = require("../controllers/products/Controllers");
-const {
-  getAllReview,
-  reviewCreate,
-  reviewDelete,
-} = require("../controllers/review/controllers");
+
 const {
   createshop,
   getShops,
 } = require("../controllers/products/controllerShop");
-
 
 // const enviarMail = require("../config/mailer") ← ESTA FUNCION NO VA??????????
 
@@ -105,7 +100,6 @@ router.get("/products", async (req, res) => {
 router.post("/products", createProducts);
 
 router.get("/category", getCategories);
-
 
 router.get("/products/:id", async (req, res) => {
   // res.send("Soy el get /videogame")
@@ -316,7 +310,6 @@ router.put("/user/:id", async function (req, res) {
 
 // router.delete("/favorites/:email/:productId", removeFromFavorites);
 
-
 // BENJA , JAQUE ↓
 
 //routes cargar db
@@ -328,8 +321,6 @@ const categorias = [
   { title: "Para la casa" },
 ];
 
-
-
 const createCategory = async () => {
   try {
     await Category.bulkCreate(categorias);
@@ -339,20 +330,18 @@ const createCategory = async () => {
   }
 };
 
-
 const createProduct = async () => {
   try {
     let category = "";
     let producto = "";
     let allProducts = [];
     let agregarCategory = [];
-  
 
     for (let i = 0; i < p.products.length; i++) {
       category = await Category.findOne({
         where: { title: p.products[i].category },
       });
-     
+
       producto = await Product.create({
         title: p.products[i].title,
         price: p.products[i].price,
@@ -361,11 +350,9 @@ const createProduct = async () => {
         stock: p.products[i].stock,
       });
 
-      
       let addC = producto.addCategory(category);
       allProducts.push(producto);
       agregarCategory.push(addC);
- 
     }
 
     await Promise.all([...allProducts, ...agregarCategory]);
@@ -375,9 +362,6 @@ const createProduct = async () => {
     console.log(error);
   }
 };
-
-
-
 
 const filterByCategory = async (products) => {
   const data = await Category.findAll({
@@ -395,9 +379,7 @@ const filterByCategory = async (products) => {
 
 router.get("/db", async (req, res) => {
   try {
-  
     await createCategory();
-  
 
     const products = await createProduct();
 
@@ -407,7 +389,6 @@ router.get("/db", async (req, res) => {
     return res.status(404).json(error);
   }
 });
-
 
 router.get("/filterByCategory", async (req, res) => {
   try {
@@ -421,6 +402,6 @@ router.get("/filterByCategory", async (req, res) => {
   }
 });
 
-router.put("/user/desactivar/:id", desactivarUsuario)
+router.put("/user/desactivar/:id", desactivarUsuario);
 
 module.exports = router;

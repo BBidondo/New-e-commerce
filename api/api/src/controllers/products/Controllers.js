@@ -1,4 +1,4 @@
-const { Product, Mark, Category, Review } = require("../../db")
+const { Product, Category } = require("../../db")
 
 // Funcion para traer todos los juegos, incluye el modelo categoria
 const getAllProducts = async () => {
@@ -19,7 +19,7 @@ const getAllProducts = async () => {
 }
 
 const createProducts = async (req, res) => {
-  const { title, price, detail, img, stock, category, mark } = req.body
+  const { title, price, detail, img, stock, category } = req.body
   // try {
   //   if (!title || !price || !detail || !img || !stock || !category || !mark) {
   //     res.status(404).send("faltan parametros")
